@@ -1,0 +1,240 @@
+{
+  "model_metrics": [
+    {
+      "model": "VADER",
+      "accuracy": 0.13333333333333333,
+      "precision_weighted": 0.9677551020408163,
+      "recall_weighted": 0.13333333333333333,
+      "f1_weighted": 0.19422400844395726,
+      "precision_macro": 0.3469387755102041,
+      "recall_macro": 0.3701149425287356,
+      "f1_macro": 0.09239637884139162,
+      "kappa": 0.012758201701093652,
+      "per_class": {
+        "Positive": {
+          "precision": 0.04081632653061224,
+          "recall": 1.0,
+          "f1": 0.0784313725490196,
+          "support": 4
+        },
+        "Negative": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Neutral": {
+          "precision": 1.0,
+          "recall": 0.1103448275862069,
+          "f1": 0.19875776397515527,
+          "support": 145
+        }
+      }
+    },
+    {
+      "model": "TextBlob",
+      "accuracy": 0.38,
+      "precision_weighted": 0.9679215686274509,
+      "recall_weighted": 0.38,
+      "f1_weighted": 0.5199054212537358,
+      "precision_macro": 0.3490196078431373,
+      "recall_macro": 0.45517241379310347,
+      "f1_macro": 0.20841372526765786,
+      "kappa": 0.03546981953951445,
+      "per_class": {
+        "Positive": {
+          "precision": 0.047058823529411764,
+          "recall": 1.0,
+          "f1": 0.0898876404494382,
+          "support": 4
+        },
+        "Negative": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "Neutral": {
+          "precision": 1.0,
+          "recall": 0.36551724137931035,
+          "f1": 0.5353535353535354,
+          "support": 145
+        }
+      }
+    },
+    {
+      "model": "DistilBERT",
+      "accuracy": 0.04666666666666667,
+      "precision_weighted": 0.9688268984569773,
+      "recall_weighted": 0.04666666666666667,
+      "f1_weighted": 0.030318697175840032,
+      "precision_macro": 0.362913550299845,
+      "recall_macro": 0.671264367816092,
+      "f1_macro": 0.06435786435786435,
+      "kappa": 0.020950294399561864,
+      "per_class": {
+        "Positive": {
+          "precision": 0.0784313725490196,
+          "recall": 1.0,
+          "f1": 0.14545454545454545,
+          "support": 4
+        },
+        "Negative": {
+          "precision": 0.010309278350515464,
+          "recall": 1.0,
+          "f1": 0.02040816326530612,
+          "support": 1
+        },
+        "Neutral": {
+          "precision": 1.0,
+          "recall": 0.013793103448275862,
+          "f1": 0.027210884353741496,
+          "support": 145
+        }
+      }
+    },
+    {
+      "model": "GPT",
+      "accuracy": 0.9466666666666667,
+      "precision_weighted": 0.9550536130536132,
+      "recall_weighted": 0.9466666666666667,
+      "f1_weighted": 0.9501851851851851,
+      "precision_macro": 0.5596736596736597,
+      "recall_macro": 0.7385057471264368,
+      "f1_macro": 0.6203703703703703,
+      "kappa": 0.3115318416523235,
+      "per_class": {
+        "Positive": {
+          "precision": 0.2,
+          "recall": 0.25,
+          "f1": 0.2222222222222222,
+          "support": 4
+        },
+        "Negative": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "support": 1
+        },
+        "Neutral": {
+          "precision": 0.9790209790209791,
+          "recall": 0.9655172413793104,
+          "f1": 0.9722222222222222,
+          "support": 145
+        }
+      }
+    }
+  ],
+  "confusion_matrices": {
+    "VADER": [
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        93,
+        36,
+        16
+      ]
+    ],
+    "TextBlob": [
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        80,
+        12,
+        53
+      ]
+    ],
+    "DistilBERT": [
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        47,
+        96,
+        2
+      ]
+    ],
+    "GPT": [
+      [
+        1,
+        0,
+        3
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        4,
+        1,
+        140
+      ]
+    ]
+  },
+  "model_agreements": [
+    {
+      "models": "VADER vs TextBlob",
+      "agreement_rate": 0.56,
+      "kappa": 0.23196276183087672
+    },
+    {
+      "models": "VADER vs DistilBERT",
+      "agreement_rate": 0.52,
+      "kappa": 0.227357275718987
+    },
+    {
+      "models": "VADER vs GPT",
+      "agreement_rate": 0.14666666666666667,
+      "kappa": 0.022900763358778664
+    },
+    {
+      "models": "TextBlob vs DistilBERT",
+      "agreement_rate": 0.3,
+      "kappa": 0.06777153003847303
+    },
+    {
+      "models": "TextBlob vs GPT",
+      "agreement_rate": 0.3333333333333333,
+      "kappa": -0.036484245439469376
+    },
+    {
+      "models": "DistilBERT vs GPT",
+      "agreement_rate": 0.04666666666666667,
+      "kappa": 0.01447277739490005
+    }
+  ],
+  "summary": {
+    "total_samples": 150,
+    "label_distribution": {
+      "Neutral": 145,
+      "Positive": 4,
+      "Negative": 1
+    },
+    "best_model_accuracy": 0.9466666666666667,
+    "best_model_f1": 0.9501851851851851
+  }
+}
